@@ -1,0 +1,17 @@
+{
+  type: 'object',
+  properties: {
+    server: { type: 'string' },
+    name: { type: 'string' },
+    endpoint: { type: 'string' },
+    method: { type: 'string' },
+    role: {
+      type: 'string',
+      'x-ref': 'Role',
+      description: 'Refers to Role',
+      pattern: '^[0-9a-fA-F]{24}$'
+    },
+    _id: { type: 'string', pattern: '^[0-9a-fA-F]{24}$' }
+  },
+  required: [ 'server', 'name', 'endpoint', 'method' ]
+}
