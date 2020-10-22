@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 require('mongoose-schema-jsonschema')(mongoose);
 const fs = require('fs');
 const util = require('util');
-const logFile = fs.createWriteStream('log.txt', { flags: 'a' });
+const logFile = fs.createWriteStream('output.txt', { flags: 'a' });
   // Or 'w' to truncate the file every time the process starts.
 const logStdout = process.stdout;
 
